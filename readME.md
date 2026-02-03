@@ -4,7 +4,7 @@ A centralized hub for organizing and showcasing coding practice projects with a 
 
 ## 🌐 Live Demo
 
-**Access the dashboard here:** [https://practice-projects-tan.vercel.app/](https://practice-projects-tan.vercel.app/)
+**Access the dashboard here:** [https://practice-projects-tan.vercel.app/](https://practice-projects-tan.vercel.app/){:target="_blank"}
 
 ## 📋 Features
 
