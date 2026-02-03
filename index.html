@@ -1,32 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Practice Hub</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Practice Repository | Coding Projects Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>🚀 My Practice Hub</h1>
-  <p>Track all JS, React, and CSS projects</p>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="logo-container">
+            <div class="logo">PR</div>
+            <div class="header-text">
+                <h1>Practice Repository</h1>
+                <p>Organized hub for coding practice projects</p>
+            </div>
+        </div>
+        <button class="mobile-menu-btn" id="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
 
-  <!-- JS Section -->
-  <div class="section" id="js-section">
-    <h2>📘 JS Basics & Advanced</h2>
-    <ul id="js-list"></ul>
-  </div>
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Fixed Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-content">
+                <h2 class="section-title"><i class="fas fa-filter"></i> Categories</h2>
+                
+                <div class="categories">
+                    <button class="category-btn active" data-category="all">
+                        <span><i class="fas fa-layer-group"></i> All Projects</span>
+                        <span class="category-count">12</span>
+                    </button>
+                    <button class="category-btn" data-category="js">
+                        <span><i class="fab fa-js-square js-color"></i> JavaScript Basics</span>
+                        <span class="category-count">5</span>
+                    </button>
+                    <button class="category-btn" data-category="react">
+                        <span><i class="fab fa-react react-color"></i> React Framework</span>
+                        <span class="category-count">4</span>
+                    </button>
+                    <button class="category-btn" data-category="css">
+                        <span><i class="fab fa-css3-alt css-color"></i> CSS Frameworks</span>
+                        <span class="category-count">3</span>
+                    </button>
+                    <button class="category-btn" data-category="advanced">
+                        <span><i class="fas fa-rocket html-color"></i> Advanced JS</span>
+                        <span class="category-count">2</span>
+                    </button>
+                    <button class="category-btn" data-category="node">
+                        <span><i class="fab fa-node-js node-color"></i> Node.js</span>
+                        <span class="category-count">1</span>
+                    </button>
+                </div>
+                
+                <button class="add-project-btn" id="open-modal">
+                    <i class="fas fa-plus-circle"></i> Add New Project
+                </button>
+            </div>
+        </aside>
 
-  <!-- React Section -->
-  <div class="section" id="react-section">
-    <h2>⚛️ React Framework</h2>
-    <ul id="react-list"></ul>
-  </div>
+        <!-- Overlay for mobile -->
+        <div class="overlay" id="overlay"></div>
 
-  <!-- CSS Section -->
-  <div class="section" id="css-section">
-    <h2>🎨 CSS Frameworks</h2>
-    <ul id="css-list"></ul>
-  </div>
+        <!-- Main Content -->
+        <main class="content-area">
+            <!-- Stats Bar -->
+            <div class="stats-bar">
+                <div class="stat-card total-stat">
+                    <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+                    <div class="stat-number" id="total-projects">12</div>
+                    <div class="stat-label">Total Projects</div>
+                </div>
+                <div class="stat-card js-stat">
+                    <div class="stat-icon"><i class="fab fa-js-square"></i></div>
+                    <div class="stat-number" id="js-projects">5</div>
+                    <div class="stat-label">JS Projects</div>
+                </div>
+                <div class="stat-card react-stat">
+                    <div class="stat-icon"><i class="fab fa-react"></i></div>
+                    <div class="stat-number" id="react-projects">4</div>
+                    <div class="stat-label">React Projects</div>
+                </div>
+                <div class="stat-card css-stat">
+                    <div class="stat-icon"><i class="fab fa-css3-alt"></i></div>
+                    <div class="stat-number" id="css-projects">3</div>
+                    <div class="stat-label">CSS Projects</div>
+                </div>
+            </div>
 
-  <script src="script.js"></script>
+            <!-- Projects Section -->
+            <section class="projects-section">
+                <div class="section-header">
+                    <h2>My Practice Projects</h2>
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="search-input" placeholder="Search projects...">
+                    </div>
+                </div>
+                
+                <div class="projects-container" id="projects-container">
+                    <!-- Project cards will be generated dynamically by JavaScript -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Practice Repository</h3>
+                <p>A centralized hub for organizing coding practice projects by category. Keep all your practice work in one organized place with easy access to live demos and source code.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#" class="footer-link">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="#" class="footer-link">
+                    <i class="fas fa-code"></i> Projects
+                </a>
+                <a href="#" class="footer-link">
+                    <i class="fas fa-question-circle"></i> Help
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Practice Repository. Built with <i class="fas fa-heart" style="color: #e25555;"></i> for organizing coding practice.</p>
+        </div>
+    </footer>
+
+    <!-- Modal for adding new projects -->
+    <div class="modal" id="project-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add New Practice Project</h2>
+                <button class="close-modal" id="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="project-form">
+                    <div class="form-group">
+                        <label for="project-name">Project Name</label>
+                        <input type="text" id="project-name" placeholder="e.g., Calculator App" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="project-category">Category</label>
+                        <select id="project-category" required>
+                            <option value="">Select a category</option>
+                            <option value="js">JavaScript Basics</option>
+                            <option value="react">React Framework</option>
+                            <option value="css">CSS Frameworks</option>
+                            <option value="advanced">Advanced JS</option>
+                            <option value="node">Node.js</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="project-description">Description</label>
+                        <textarea id="project-description" placeholder="Brief description of the project, what it does, and what you learned..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="live-url">Live Demo URL (optional)</label>
+                        <input type="url" id="live-url" placeholder="https://your-username.github.io/repo-name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="code-url">Code Repository URL</label>
+                        <input type="url" id="code-url" placeholder="https://github.com/your-username/repo-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tech-input">Technologies Used</label>
+                        <div class="tech-input-container">
+                            <input type="text" id="tech-input" placeholder="e.g., JavaScript, HTML, CSS">
+                            <button type="button" class="add-tech-btn" id="add-tech-btn">Add</button>
+                        </div>
+                        <div class="tech-tags-container" id="tech-tags-container">
+                            <!-- Tech tags will be added here -->
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" id="cancel-btn">Cancel</button>
+                <button type="button" class="btn btn-primary" id="save-project-btn">Save Project</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
