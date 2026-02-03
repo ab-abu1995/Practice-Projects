@@ -33,13 +33,6 @@ The dashboard helps organize practice projects in these categories:
 4. **View Live Demos**: Click "Live Demo" to see projects in action
 5. **View Code**: Click "View Code" to see the source files
 
-## 📱 Mobile Experience
-
-On mobile devices:
-- Tap the ☰ hamburger menu to open the sidebar
-- Sidebar overlays the content for easy navigation
-- Project cards stack vertically for optimal viewing
-
 ## 🛠️ Technologies Used
 
 - HTML5, CSS3, JavaScript (ES6+)
