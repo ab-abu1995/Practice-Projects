@@ -13,15 +13,6 @@
                 codeUrl: "js-basics/calculator/"
             },
             {
-                id: 2,
-                name: "Todo List",
-                category: "js",
-                description: "A task management application with add, edit, delete, and filter functionality. Uses local storage.",
-                technologies: ["JavaScript", "Local Storage", "CSS Grid"],
-                liveUrl: "js-basics/todo-list/index.html",
-                codeUrl: "js-basics/todo-list/"
-            },
-            {
                 id: 3,
                 name: "Weather App",
                 category: "react",
@@ -29,15 +20,6 @@
                 technologies: ["React", "API Integration", "Axios"],
                 liveUrl: "react/weather-app/build/index.html",
                 codeUrl: "react/weather-app/"
-            },
-            {
-                id: 4,
-                name: "E-commerce Page",
-                category: "react",
-                description: "A responsive e-commerce product page with cart functionality, image gallery, and product variants.",
-                technologies: ["React", "Context API", "React Router"],
-                liveUrl: "react/ecommerce/build/index.html",
-                codeUrl: "react/ecommerce/"
             },
             {
                 id: 5,
@@ -49,15 +31,6 @@
                 codeUrl: "css/dashboard/"
             },
             {
-                id: 6,
-                name: "Landing Page",
-                category: "css",
-                description: "A modern landing page with CSS animations, transitions, and a responsive navigation menu.",
-                technologies: ["CSS Animations", "Transitions"],
-                liveUrl: "css/landing-page/index.html",
-                codeUrl: "css/landing-page/"
-            },
-            {
                 id: 7,
                 name: "Expense Tracker",
                 category: "advanced",
@@ -67,15 +40,6 @@
                 codeUrl: "advanced-js/expense-tracker/"
             },
             {
-                id: 8,
-                name: "Password Generator",
-                category: "js",
-                description: "A secure password generator with customizable options for length, character types, and strength indicator.",
-                technologies: ["JavaScript", "Regular Expressions"],
-                liveUrl: "js-basics/password-generator/index.html",
-                codeUrl: "js-basics/password-generator/"
-            },
-            {
                 id: 9,
                 name: "Blog Platform",
                 category: "react",
@@ -83,15 +47,6 @@
                 technologies: ["React", "Markdown", "React Hooks"],
                 liveUrl: "react/blog-platform/build/index.html",
                 codeUrl: "react/blog-platform/"
-            },
-            {
-                id: 10,
-                name: "Portfolio Template",
-                category: "css",
-                description: "A responsive portfolio template with smooth scrolling, CSS variables for theming, and accessibility features.",
-                technologies: ["CSS Variables", "Accessibility"],
-                liveUrl: "css/portfolio-template/index.html",
-                codeUrl: "css/portfolio-template/"
             },
             {
                 id: 11,
@@ -108,7 +63,7 @@
                 category: "node",
                 description: "A Node.js REST API with Express, MongoDB simulation, and CRUD operations for a sample resource.",
                 technologies: ["Node.js", "Express", "REST API"],
-                liveUrl: "",
+                liveUrl: "vvvvv",
                 codeUrl: "nodejs/simple-api/"
             }
         ];
