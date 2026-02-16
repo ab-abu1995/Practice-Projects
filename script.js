@@ -9,8 +9,8 @@
                 category: "js",
                 description: "A fully functional calculator with basic arithmetic operations, keyboard support, and responsive design.",
                 technologies: ["JavaScript", "HTML", "CSS", "DOM"],
-                liveUrl: "js-basics/calculator/index.html",
-                codeUrl: "js-basics/calculator/"
+                liveUrl: "ReactProject/practice-1/index.html",
+                codeUrl: "practice-1/index.html"
             },
             {
                 id: 3,
