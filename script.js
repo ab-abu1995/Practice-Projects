@@ -9,8 +9,8 @@
                 category: "js",
                 description: "A fully functional calculator with basic arithmetic operations, keyboard support, and responsive design.",
                 technologies: ["JavaScript", "HTML", "CSS", "DOM"],
-                liveUrl: "ReactProject/practice-1/index.html",
-                codeUrl: "practice-1/index.html"
+                liveUrl: "https://practice-projects-f3u2.vercel.app/",
+                codeUrl: "https://github.com/ab-abu1995/Practice-Projects/blob/main/ReactProject/practice-1/src/App.tsx"
             },
             {
                 id: 3,
