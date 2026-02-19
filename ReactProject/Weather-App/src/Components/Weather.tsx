@@ -69,7 +69,7 @@ function Weather() {
   }
 
 useEffect(() => {
-        searching("new york");
+        searching("Bahir Dar");
       }, []);
 
   return (

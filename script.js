@@ -18,8 +18,8 @@
                 category: "react",
                 description: "React application that displays current weather and forecast using a weather API with search functionality.",
                 technologies: ["React", "API Integration", "Axios"],
-                liveUrl: "react/weather-app/build/index.html",
-                codeUrl: "react/weather-app/"
+                liveUrl: "https://practice-projects-jgn7-hp8npp5uz-abraham-abunu.vercel.app/",
+                codeUrl: "https://github.com/ab-abu1995/Practice-Projects/blob/main/ReactProject/Weather-App/src/Components/Weather.tsx"
             },
             {
                 id: 5,
