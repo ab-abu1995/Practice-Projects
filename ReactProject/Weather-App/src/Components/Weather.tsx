@@ -9,13 +9,20 @@ import sun from '../assets/sun.png';
 import wind from '../assets/wind.png';
 import rainy from '../assets/rainy.png';
 
+interface WeatherDataType {
+  humid: number;
+  windSpeed: number;
+  temperature: number;
+  location: string;
+  icon: string;
+}
 
 function Weather() {
 
-  const inputRef = useRef();
-  const [weatherData, setWeatherData] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const [weatherData, setWeatherData] = useState<WeatherDataType | false>(false);
 
-  const allIcons = {
+  const allIcons: { [key: string]: string } = {
     "01d": sun,
     "01n": sun,
     "02d": cloudy,
@@ -32,7 +39,7 @@ function Weather() {
     "13n": snow
   }
 
-  const searching = async(city) => {
+  const searching = async(city: string) => {
 
     if (!city) {
       alert("Please Enter correct City Name");
@@ -44,7 +51,8 @@ function Weather() {
           const response = await fetch(url);
           const data = await response.json();
 
-          const icon = allIcons[data.weather[0].icon] || sun;
+          const iconCode = data.weather[0].icon as keyof typeof allIcons;
+          const icon = allIcons[iconCode] || sun;
 
           setWeatherData({
             humid: data.main.humidity,
@@ -69,10 +77,11 @@ useEffect(() => {
 
         <div className="search">
           <input ref={inputRef} type="text" placeholder="Enter city..."/>
-          <img src={search} alt="search icon" onClick={()=> searching(inputRef.current.value)} />
+          <img src={search} alt="search icon" onClick={()=> searching(inputRef.current?.value || "")} />
         </div>
         
-        {weatherData? <>
+        {weatherData ? (
+        <>
         <img src={weatherData.icon} alt="weather icon" className="weather-icon" />
         <p className="temperature">{weatherData.temperature}°C</p>
         <p className="location">{weatherData.location}</p>
@@ -92,7 +101,7 @@ useEffect(() => {
             </div>
           </div>
         </div>
-        </>:<p className="error">City Not Found</p>}
+        </>):<p className="error">City Not Found</p>}
 
 
     </div>
